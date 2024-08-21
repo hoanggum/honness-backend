@@ -101,6 +101,7 @@ return [
     'not_regex' => 'The :attribute format is invalid.',
     'numeric' => 'The :attribute must be a number.',
     'password' => 'The password is incorrect.',
+    
     'present' => 'The :attribute field must be present.',
     'prohibited' => 'The :attribute field is prohibited.',
     'prohibited_if' => 'The :attribute field is prohibited when :other is :value.',
@@ -142,8 +143,14 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'password' => [
+            'min' => 'The :attribute must be at least :min characters.',
+            'confirmed' => 'The :attribute confirmation does not match.',
+            'regex' => [
+                'lowercase' => 'The :attribute must contain at least one lowercase letter.',
+                'uppercase' => 'The :attribute must contain at least one uppercase letter.',
+                'number' => 'The :attribute must contain at least one number.',
+            ],
         ],
     ],
 
